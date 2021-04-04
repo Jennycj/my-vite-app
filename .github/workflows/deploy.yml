@@ -14,6 +14,9 @@ jobs:
         node-version: [14.x, 15.x]
 
     steps:
+    - name: Build
+      run: |
+        yarn build
     - name: display dir
       run: ls -R
     - name: Deploy to S3
