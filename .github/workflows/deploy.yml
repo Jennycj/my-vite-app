@@ -16,8 +16,6 @@ jobs:
     steps:
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@master
-      environment: staging
-      url: 'http://jennycj-react-vite-app.s3-website.us-east-2.amazonaws.com'
       with:
         args: --acl public-read --delete
       env:
@@ -38,8 +36,6 @@ jobs:
      steps:
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
-        environment: staging
-        url: 'http://prod-react-vite-app.s3-website.us-east-2.amazonaws.com'
         with:
           args: --acl public-read --delete
         env:
