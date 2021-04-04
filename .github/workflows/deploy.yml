@@ -14,10 +14,10 @@ jobs:
         node-version: [14.x, 15.x]
 
     steps:
-    - name: Get artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: vite-app
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: vite-app
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@master
       with:
@@ -37,10 +37,10 @@ jobs:
         node-version: [10.x, 12.x, 14.x, 15.x]
 
      steps:
-     - name: Get artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: vite-app
+     - name: Download artifact
+       uses: actions/download-artifact@v2
+       with:
+        name: vite-app
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
         with:
