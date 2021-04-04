@@ -2,9 +2,7 @@ name: Deployment
 
 on:
   push:
-    branches: [ staging, master ]
-  pull_request:
-    branches: [ staging, master ]
+    branches: [ master ]
 
 jobs:
   deploy-staging:
