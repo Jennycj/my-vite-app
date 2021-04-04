@@ -26,11 +26,10 @@ jobs:
     - name: Build
       run: |
         yarn build
-    - name: Share artifact
+    - name: production artifacts
         uses: actions/upload-artifact@v2
         with:
           name: vite-app
           path: |
             dist
             !dist/**/*.md
-    
