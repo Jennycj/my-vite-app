@@ -3,9 +3,8 @@ name: Build and deployment workflow
 on:
   pull_request:
   push:
-    branches:
-      - master
-
+    branches: [master, develop]
+      
 jobs:
   build:
     runs-on: ubuntu-latest
