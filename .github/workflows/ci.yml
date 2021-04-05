@@ -22,14 +22,14 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Yarn Install
       run: |
-        yarn install
+        yarn install --frozen-lockfile
     - name: Build
       run: |
         yarn build
     - name: production artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: vite-app
-          path: |
-            dist
-            !dist/**/*.md
+      uses: actions/upload-artifact@v2
+      with:
+        name: vite-app
+        path: |
+          dist
+          !dist/**/*.md
